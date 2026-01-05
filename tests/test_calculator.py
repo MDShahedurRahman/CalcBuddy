@@ -32,3 +32,8 @@ def test_divide_by_zero():
 def test_power():
     c = Calculator()
     assert c.power(2, 3).value == 8
+
+
+def test_modulo_ok():
+    c = Calculator()
+    assert c.modulo(10, 3).value == 1
