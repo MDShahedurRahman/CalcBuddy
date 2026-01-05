@@ -31,3 +31,14 @@ class Calculator:
         if b == 0:
             return CalcResult(float("nan"), "Error: Modulo by zero")
         return CalcResult(a % b)
+
+
+def parse_number(text: str) -> float:
+    """
+    Converts input string to float safely.
+    Raises ValueError if invalid.
+    """
+    text = text.strip()
+    # Allow comma-separated numbers like "1,000"
+    text = text.replace(",", "")
+    return float(text)
