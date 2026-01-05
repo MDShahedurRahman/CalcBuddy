@@ -37,3 +37,10 @@ def test_power():
 def test_modulo_ok():
     c = Calculator()
     assert c.modulo(10, 3).value == 1
+
+
+def test_modulo_by_zero():
+    c = Calculator()
+    r = c.modulo(10, 0)
+    assert math.isnan(r.value)
+    assert "Modulo by zero" in r.message
