@@ -10,3 +10,8 @@ def test_add():
 def test_subtract():
     c = Calculator()
     assert c.subtract(10, 4).value == 6
+
+
+def test_multiply():
+    c = Calculator()
+    assert c.multiply(3, 5).value == 15
