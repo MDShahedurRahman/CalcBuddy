@@ -27,3 +27,8 @@ def test_divide_by_zero():
     r = c.divide(10, 0)
     assert math.isnan(r.value)
     assert "Division by zero" in r.message
+
+
+def test_power():
+    c = Calculator()
+    assert c.power(2, 3).value == 8
