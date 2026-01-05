@@ -15,3 +15,8 @@ def test_subtract():
 def test_multiply():
     c = Calculator()
     assert c.multiply(3, 5).value == 15
+
+
+def test_divide_ok():
+    c = Calculator()
+    assert c.divide(10, 2).value == 5
