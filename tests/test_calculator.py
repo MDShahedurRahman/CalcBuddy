@@ -20,3 +20,10 @@ def test_multiply():
 def test_divide_ok():
     c = Calculator()
     assert c.divide(10, 2).value == 5
+
+
+def test_divide_by_zero():
+    c = Calculator()
+    r = c.divide(10, 0)
+    assert math.isnan(r.value)
+    assert "Division by zero" in r.message
